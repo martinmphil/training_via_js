@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>Please see our home page for examples of training via of JavaScript.</h1>
+    <p>Please see our home page for examples of training via JavaScript.</p>
   </div>
 </template>

@@ -10,10 +10,9 @@
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 #nav {
@@ -28,4 +27,18 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+/* width & height includes padding + border for responsive web design */
+* {
+  box-sizing: border-box;
+}
+/* responsive web design */
+@media only screen and (min-width: 40em) {
+  /* For desktop: */
+  #app {
+    width: 40em;
+    margin: auto;
+  }
+}
+
 </style>

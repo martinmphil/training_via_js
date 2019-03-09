@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-    <TheHeader/>
+    <TheLogo/>
     <ExamplesList/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import TheHeader from '@/components/TheHeader.vue'
+import TheLogo from '@/components/TheLogo.vue'
 import ExamplesList from '@/components/ExamplesList.vue'
 
 export default {
   name: 'home',
   components: {
-    TheHeader,
+    TheLogo,
     ExamplesList,
   }
 }
