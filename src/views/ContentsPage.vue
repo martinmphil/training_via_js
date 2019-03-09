@@ -11,7 +11,7 @@ import TheLogo from '@/components/TheLogo.vue'
 import ExamplesList from '@/components/ExamplesList.vue'
 
 export default {
-  name: 'home',
+  name: 'contents-page',
   components: {
     TheLogo,
     ExamplesList,
