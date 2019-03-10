@@ -9,12 +9,16 @@
 </template>
 
 <style>
+body {
+  background-color:#ffffcc;
+}
 #app {
   font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
 #nav {
   padding: 2em;
 }
