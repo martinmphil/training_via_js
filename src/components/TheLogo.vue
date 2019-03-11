@@ -1,5 +1,5 @@
 <template>
-  <img id="training-via-js-logo" 
+  <img id="training-via-js-logo"
     alt="Training via JavaScript logo"
     width="300" height="150"
     src="../assets/training_via_js_logo.svg">

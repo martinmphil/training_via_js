@@ -8,7 +8,7 @@
       </a>
     </p>
     <p class="bttn-linking-to-example">
-      <a href="http://dancewith.co.uk/js/fp_teaser.html">
+      <a class="link-text" href="http://dancewith.co.uk/js/fp_teaser.html">
         Functional programming teaser.
       </a>
     </p>

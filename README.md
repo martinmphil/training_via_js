@@ -1,4 +1,4 @@
-# training_via_js
+# Training via JavaScript
 
 ## Project setup
 ```

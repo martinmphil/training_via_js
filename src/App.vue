@@ -1,8 +1,14 @@
 <template>
   <div id="app">
+    <router-link to="/">
+      <img id="training-via-js-logo"
+        alt="Training via JavaScript logo"
+        width="300" height="150"
+        src="./assets/training_via_js_logo.svg">
+    </router-link>
     <nav id="nav">
       <router-link to="/">Contents</router-link> |
-      <router-link to="/sensor">Sensor</router-link>
+      <router-link to="/sensor">Sensors</router-link>
     </nav>
     <router-view/>
   </div>
@@ -16,7 +22,7 @@ body {
   font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  /* color: #2c3e50; */
 }
 
 #nav {
@@ -33,6 +39,12 @@ body {
   /* color: #42b983; */
   text-decoration: none;
   color: black;
+}
+
+#training-via-js-logo {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
 }
 
 /* width & height includes padding + border for responsive web design */
