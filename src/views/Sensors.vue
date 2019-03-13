@@ -2,7 +2,9 @@
   <div class="sensors">
     <header>
       <h1>Accuracy vs precision</h1>
-      <p class="tagline">Comparing and contrasting accuracy with precision in sensor measurements</p>
+      <p class="tagline">
+        Comparing and contrasting accuracy with precision in sensor measurements
+      </p>
     </header>
     <section>
       <p>
@@ -11,9 +13,8 @@
         specific scientific definitions imply contrasting concepts of accuracy and precision.
       </p>
       <figure>
-        <img id="probDistAccVsPrecise"
+        <img
           src="@/assets/prob_dist_acc_vs_precise.svg"
-          height="320" width="620"
           alt="probability distribution illustrating accuracy versus precision">
         <figcaption>Probability distribution illustrating accuracy versus precision</figcaption>
       </figure>
@@ -22,7 +23,8 @@
         as in the common meaning of the word accurate.
       </p>
       <p>
-        Precision, in contrast, only considers the potential variance of values within a given measurement.
+        Precision, in contrast,
+        only considers the potential variance of values within a given measurement.
         Hence, for a set system, imprecise sensors yield results separated by large differences.
         Whereas precise measurements produces results clustered together.
       </p>
@@ -35,7 +37,7 @@
     <sensors-exercises/>
     <footer>
       <p>
-        Please see our <router-link to="/">Contents Page</router-link>
+        Please see our <router-link to="/">contents page</router-link>
         for more examples of Training via JavaScript.
       </p>
       {{ dateNow }}
@@ -67,8 +69,14 @@ export default {
   font-weight: bold;
 }
 
-#probDistAccVsPrecise {
+figure {
+  margin:0;
   width: 100%;
+}
+
+figcaption{
+  text-align: center;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 footer {
