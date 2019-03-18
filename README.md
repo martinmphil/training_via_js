@@ -1,8 +1,4 @@
-# Training via JavaScript
-
-Using JavaScript in training environments
-
-![training_via_js_logo](https://user-images.githubusercontent.com/37618836/50683939-c5291780-100b-11e9-8bbc-0ba27ca28872.png)
+# training_via_js
 
 ## Project setup
 ```
@@ -27,6 +23,11 @@ npm run test
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Run your unit tests
+```
+npm run test:unit
 ```
 
 ### Customize configuration
