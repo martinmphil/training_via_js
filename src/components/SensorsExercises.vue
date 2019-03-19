@@ -11,15 +11,20 @@
       alt="Exercise dataset: Graph A"
       class="dataset-graph"
     >
+    <SensorsExercisesResponses desiredAnswerId="gamma"/>
     <hr>
 
   </section>
 </template>
 
 <script>
-export default {
-  name: 'sensors-exercises'
+import SensorsExercisesResponses from '@/components/SensorsExercisesResponses.vue'
 
+export default {
+  name: 'SensorsExercises',
+  components: {
+    SensorsExercisesResponses
+  }
 }
 </script>
 
