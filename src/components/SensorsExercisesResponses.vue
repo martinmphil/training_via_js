@@ -7,9 +7,9 @@
         :id="item.id"
         :index="index"
         v-html="item.text"
-        @click="userResponse"
+        @click.once="userResponse"
         :disabled=spent
-        :class="item.classHolder"
+        :class="[item.classHolder, { answered: spent}]"
     >
     </button>
   </div>
@@ -37,9 +37,15 @@ export default {
     userResponse: function (event) {
       this.spent = true
       this.userAnswerId = event.target.id
+      let t = event.target
+      let c = t.textContent
+      let i = t.getAttribute('index')
+      t.blur()
       if (this.userAnswerId === this.desiredAnswerId) {
-        let x = event.target.getAttribute('index')
-        this.possibleAnswers[x].classHolder = 'correctUserAnswer'
+        this.possibleAnswers[i].classHolder = 'correctUserAnswer'
+        t.textContent = `CORRECT: ` + c
+      } else {
+        t.textContent = `Incorrect`
       }
     }
   }
@@ -51,15 +57,20 @@ export default {
 button {
   display: block;
   width: 24em;
-  margin: 1em auto;
-  padding: 1em 0;
+  margin: 0.6em auto;
+  padding: 0.6em 0;
   font-size: 120%;
   cursor: pointer;
+  box-shadow: 0.4em 0.4em 0.5em 0.1em rgba(0,0,0,0.5);
 }
 
 .correctUserAnswer {
   background-color: white;
   color: green;
+}
+
+.answered {
+  pointer-events: none;
 }
 
 </style>
