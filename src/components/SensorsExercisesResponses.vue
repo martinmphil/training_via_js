@@ -35,17 +35,17 @@ export default {
   },
   methods: {
     userResponse: function (event) {
+      event.target.blur()
       this.spent = true
       this.userAnswerId = event.target.id
-      let t = event.target
-      let c = t.textContent
-      let i = t.getAttribute('index')
-      t.blur()
+      let i = event.target.getAttribute('index')
+      let a = this.possibleAnswers[i]
+      let c = a.text
       if (this.userAnswerId === this.desiredAnswerId) {
-        this.possibleAnswers[i].classHolder = 'correctUserAnswer'
-        t.textContent = `CORRECT: ` + c
+        a.classHolder = 'correctUserAnswer'
+        a.text = `CORRECT: ` + c
       } else {
-        t.textContent = `Incorrect`
+        a.text = `Incorrect`
       }
     }
   }
