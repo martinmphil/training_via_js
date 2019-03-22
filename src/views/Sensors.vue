@@ -12,11 +12,13 @@
         But in sensor technology,
         specific scientific definitions imply contrasting concepts of accuracy and precision.
       </p>
-      <figure>
+      <figure class="figure">
         <img
           src="@/assets/prob_dist_acc_vs_precise.svg"
           alt="probability distribution illustrating accuracy versus precision">
-        <figcaption>Probability distribution illustrating accuracy versus precision</figcaption>
+        <figcaption class="figcaption">
+          Probability distribution illustrating accuracy versus precision
+        </figcaption>
       </figure>
       <p>
         Accuracy refers to the proximity of readings to a 'true' or reference value,
@@ -35,7 +37,7 @@
       <hr>
     </section>
     <sensors-exercises/>
-    <footer>
+    <footer class="footer">
       <p>
         Please see our <router-link to="/">contents page</router-link>
         for more examples of Training via JavaScript.
@@ -69,17 +71,17 @@ export default {
   font-weight: bold;
 }
 
-figure {
+.figure {
   margin:0;
   width: 100%;
 }
 
-figcaption{
+.figcaption {
   text-align: center;
   font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
-footer {
+.footer {
   margin: 2em;
   text-align: center;
   font-size: 90%;

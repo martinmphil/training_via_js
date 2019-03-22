@@ -2,9 +2,10 @@
   <div>
     <button
       type="button"
+      class="answerBttn"
       v-for="(item, index) in possibleAnswers"
         :key="item.id"
-        :id="item.id"
+        :answerCode="item.id"
         :index="index"
         v-html="item.text"
         @click.once="userResponse"
@@ -19,7 +20,7 @@
 export default {
   name: 'SensorsExercisesResponses',
   props: {
-    desiredAnswerId: String
+    desiredAnswerCode: String
   },
   data: function () {
     return {
@@ -30,18 +31,18 @@ export default {
         { id: 'delta', text: 'both inaccurate and imprecise', classHolder: '' }
       ],
       spent: false,
-      userAnswerId: ''
+      userAnswerCode: ''
     }
   },
   methods: {
     userResponse: function (event) {
       event.target.blur()
       this.spent = true
-      this.userAnswerId = event.target.id
+      this.userAnswerCode = event.target.getAttribute('answerCode')
       let i = event.target.getAttribute('index')
       let a = this.possibleAnswers[i]
       let c = a.text
-      if (this.userAnswerId === this.desiredAnswerId) {
+      if (this.userAnswerCode === this.desiredAnswerCode) {
         a.classHolder = 'correctUserAnswer'
         a.text = `CORRECT: ` + c
       } else {
@@ -54,7 +55,7 @@ export default {
 </script>
 
 <style scoped>
-button {
+.answerBttn {
   display: block;
   width: 24em;
   margin: 0.6em auto;
