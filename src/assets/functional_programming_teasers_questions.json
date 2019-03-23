@@ -1,0 +1,51 @@
+[
+{
+"questionText": "Do pure functions need referential transparency?",
+"yesAnsweredText": "Yes, correct, referential transparency means an expression always evaluates to the same result in any context. Such a function can be analysed and checked in isolation and always yields the same result.",
+"noAnsweredText": "Pure functions need referential transparency where the environment remains exactly the same if you replace a function with its result. For a given argument, pure functions will always evaluate to the same result.",
+"betterAnswer": "yes",
+"questionCode": "q_ref_trans"
+},
+{
+"questionText": "Does a declarative style focus on <em>what</em> processes to employ?",
+"yesAnsweredText": "Yes, correct, rather than describing exactly 'how' to manipulate information, declarative programming allows coders to concentrate on the desired results.",
+"noAnsweredText": "Declarative programming does indeed examine the logic of 'what' to do with information.",
+"betterAnswer": "yes",
+"questionCode": "q_declara"
+},
+{
+"questionText": "Does immutability mean never changing data",
+"yesAnsweredText": "Instead of overwriting data, recording additional updates creates new information while also keeping the original data intact.",
+"noAnsweredText": "Keeping data unchanged, and adding only a record of all changes, allows accurate referencing of both new and previous information.",
+"betterAnswer": "yes",
+"questionCode": "q_immut"
+},
+{
+"questionText": "Is everything a pure function needs passed-in as arguments?",
+"yesAnsweredText": "A pure function does not necessarily need all inputs passed-in as parameters because a pure function calling other pure functions remains pure itself.",
+"noAnsweredText": "Correct, all parameters must be passed-in as arguments but a pure function can call other pure functions and still maintain referential transparency.",
+"betterAnswer": "no",
+"questionCode": "q_args"
+},
+{
+"questionText": "Can small functions create big applications?",
+"yesAnsweredText": "Yes, correct, composing multiple pure functions creates complex behaviour while maintaining referential transparency.",
+"noAnsweredText": "Functional programming can reliably combine many small functions together.",
+"betterAnswer": "yes",
+"questionCode": "q_compose"
+},
+{
+"questionText": "Can functional programming reduce run-time errors?",
+"yesAnsweredText": "Yes, correct, functional programming can avoid run-time errors and also suits parallel processing in multi-threaded environments.",
+"noAnsweredText": "In addition to facilitating human reasoning, and improving the readability of code, functional programming can also mitigate run-time errors.",
+"betterAnswer": "yes",
+"questionCode": "q_reduce_errors"
+},
+{
+"questionText": "Can mathematics accurately predict the behaviour of functional programming?",
+"yesAnsweredText": "Yes, correct, in theory the result of running a purely functional program can be proven mathematically.",
+"noAnsweredText": "Mathematical proofs can indeed theoretically model exactly how a purely functional program will behave for given inputs.",
+"betterAnswer": "yes",
+"questionCode": "q_proof"
+}
+]

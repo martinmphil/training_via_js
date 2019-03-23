@@ -3,15 +3,12 @@
     <h1>Training via JavaScript</h1>
     <h2>Examples</h2>
     <p class="bttn-linking-to-example">
-      <a class="link-text" href="http://dancewith.co.uk/js/accurate_vs_precise.html">
-        Comparing and contrasting accuracy with precision in sensor measurements.
-      </a>
+      <router-link class="link-text" to="/sensor">Sensor precision vs accuracy</router-link>
     </p>
     <p class="bttn-linking-to-example">
-      <a class="link-text" href="http://dancewith.co.uk/js/fp_teaser.html">
-        Functional programming teaser.
-      </a>
+      <router-link class="link-text" to="/functional-programming">Functional programming teaser</router-link>
     </p>
+    <hr>
     <h3>JavaScript in gaming</h3>
     <p>
       <a href="http://dancewith.co.uk/tabletop2019/">
@@ -42,6 +39,7 @@ export default {
   clear: right;
   background-color: #ddffff;
   text-align: center;
+  font-size: 120%;
   border: solid;
   border-color: rgba(0,0,0,0.1);
   border-radius: 0.4em;

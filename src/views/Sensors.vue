@@ -54,7 +54,7 @@ import SensorsExercises from '@/components/SensorsExercises.vue'
 let dateNow = new Date().toDateString()
 
 export default {
-  name: 'sensors',
+  name: 'Sensors',
   components: {
     SensorsExercises
   },

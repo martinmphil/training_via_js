@@ -7,8 +7,9 @@
         src="./assets/training_via_js_logo.svg">
     </router-link>
     <nav id="nav">
-      <router-link to="/">Contents</router-link> |
-      <router-link to="/sensor">Sensors</router-link>
+       | <router-link to="/">Contents</router-link> | <br><br>
+       | <router-link to="/sensor">Sensors</router-link> | <br><br>
+       | <router-link to="/functional-programming">Functional-programming</router-link> |
     </nav>
     <router-view/>
   </div>
@@ -23,8 +24,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#training-via-js-logo {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
 #nav {
   padding: 2em;
+  display: block;
 }
 
 #nav a {
@@ -35,12 +43,6 @@ body {
 #nav a.router-link-exact-active {
   text-decoration: none;
   color: black;
-}
-
-#training-via-js-logo {
-  float: right;
-  margin-left: 1em;
-  margin-bottom: 1em;
 }
 
 /* width & height includes padding + border for responsive web design */

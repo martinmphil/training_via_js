@@ -9,7 +9,7 @@
 import ExamplesList from '@/components/ExamplesList.vue'
 
 export default {
-  name: 'contents-page',
+  name: 'ContentsPage',
   components: {
     ExamplesList
   }
