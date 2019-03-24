@@ -1,3 +1,9 @@
 module.exports = {
-  publicPath: 'joy'
+  publicPath: 'js',
+  outputDir: undefined,
+  assetsDir: undefined,
+  runtimeCompiler: undefined,
+  productionSourceMap: undefined,
+  parallel: undefined,
+  css: undefined
 }

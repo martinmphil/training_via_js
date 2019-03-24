@@ -64,6 +64,11 @@ export default {
   cursor: pointer;
   box-shadow: 0.4em 0.4em 0.5em 0.1em rgba(0,0,0,0.5);
 }
+@media screen and (max-width: 30em) {
+  .answerBttn {
+    width: 100%;
+  }
+}
 
 .correctUserAnswer {
   background-color: white;

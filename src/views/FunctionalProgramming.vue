@@ -2,6 +2,11 @@
   <div class="functional-programming">
     <h1>Functional Programming Teaser</h1>
     <p class="tagline">Declarative, pure and referentially transparent</p>
+    <p>
+      See
+      <a href="https://en.wikipedia.org/wiki/Functional_programming">Functional programming</a>
+      page on Wikipedia.
+    </p>
     <hr>
 
     <div v-for="item in questionData" :key="item.questionCode">
