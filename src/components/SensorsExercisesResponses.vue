@@ -43,6 +43,7 @@ export default {
       let a = this.possibleAnswers[i]
       let c = a.text
       if (this.userAnswerCode === this.desiredAnswerCode) {
+        this.$store.commit('correctSensorsAnswer')
         a.classHolder = 'correctUserAnswer'
         a.text = `CORRECT: ` + c
       } else {
@@ -50,7 +51,6 @@ export default {
       }
     }
   }
-
 }
 </script>
 

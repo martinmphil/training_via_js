@@ -1,5 +1,8 @@
 <template>
   <div class="sensors">
+
+    <question-results/>
+
     <header>
       <h1>Accuracy vs precision</h1>
       <p class="tagline">
@@ -50,13 +53,14 @@
 <script>
 // @ is an alias to /src
 import SensorsExercises from '@/components/SensorsExercises.vue'
+import QuestionResults from '@/components/QuestionResults.vue'
 
 let dateNow = new Date().toDateString()
 
 export default {
   name: 'Sensors',
   components: {
-    SensorsExercises
+    SensorsExercises, QuestionResults
   },
   data () {
     return {
