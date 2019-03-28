@@ -5,11 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    sensorsResults: 0,
-    functionalProgrammingResults: 0
+    totalNbrQuestionsSensors: 4,
+    correctAnswerTallySensors: 0,
+    wrongAnswerTallySensors: 0
   },
   mutations: {
-    correctSensorsAnswer: state => state.sensorsResults++
+    correctAnswerSensors: state => state.correctAnswerTallySensors++,
+    wrongAnswerSensors: state => state.wrongAnswerTallySensors++
   },
   actions: {
 

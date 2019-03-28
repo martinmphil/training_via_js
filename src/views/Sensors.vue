@@ -1,7 +1,7 @@
 <template>
   <div class="sensors">
 
-    <question-results/>
+    <sensors-grade/>
 
     <header>
       <h1>Accuracy vs precision</h1>
@@ -39,7 +39,12 @@
       </p>
       <hr>
     </section>
+
     <sensors-exercises/>
+
+    <sensors-grade/>
+    <hr>
+
     <footer class="footer">
       <p>
         Please see our <router-link to="/">contents page</router-link>
@@ -53,18 +58,16 @@
 <script>
 // @ is an alias to /src
 import SensorsExercises from '@/components/SensorsExercises.vue'
-import QuestionResults from '@/components/QuestionResults.vue'
-
-let dateNow = new Date().toDateString()
+import SensorsGrade from '@/components/SensorsGrade.vue'
 
 export default {
   name: 'Sensors',
   components: {
-    SensorsExercises, QuestionResults
+    SensorsExercises, SensorsGrade
   },
-  data () {
-    return {
-      dateNow
+  computed: {
+    dateNow: function () {
+      return new Date().toDateString()
     }
   }
 }

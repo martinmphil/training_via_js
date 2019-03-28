@@ -36,17 +36,17 @@ export default {
   },
   methods: {
     userResponse: function (event) {
-      event.target.blur()
       this.spent = true
       this.userAnswerCode = event.target.getAttribute('answerCode')
       let i = event.target.getAttribute('index')
       let a = this.possibleAnswers[i]
       let c = a.text
       if (this.userAnswerCode === this.desiredAnswerCode) {
-        this.$store.commit('correctSensorsAnswer')
+        this.$store.commit('correctAnswerSensors')
         a.classHolder = 'correctUserAnswer'
         a.text = `CORRECT: ` + c
       } else {
+        this.$store.commit('wrongAnswerSensors')
         a.text = `Incorrect`
       }
     }
