@@ -7,7 +7,7 @@
         src="./assets/training_via_js_logo.svg">
     </router-link>
     <nav id="nav">
-       | <router-link to="/">Contents</router-link> | <br><br>
+       | <router-link to="/">Home</router-link> | <br><br>
        | <router-link to="/sensor">Sensors</router-link> | <br><br>
        | <router-link to="/functional-programming">Functional-programming</router-link> |
     </nav>

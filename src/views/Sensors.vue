@@ -45,13 +45,8 @@
     <sensors-grade/>
     <hr>
 
-    <footer class="footer">
-      <p>
-        Please see our <router-link to="/">contents page</router-link>
-        for more examples of Training via JavaScript.
-      </p>
-      {{ dateNow }}
-    </footer>
+    <the-footer/>
+
   </div>
 </template>
 
@@ -59,11 +54,12 @@
 // @ is an alias to /src
 import SensorsExercises from '@/components/SensorsExercises.vue'
 import SensorsGrade from '@/components/SensorsGrade.vue'
+import TheFooter from '@/components/TheFooter.vue'
 
 export default {
   name: 'Sensors',
   components: {
-    SensorsExercises, SensorsGrade
+    SensorsExercises, SensorsGrade, TheFooter
   },
   computed: {
     dateNow: function () {

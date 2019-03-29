@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ContentsPage from './views/ContentsPage.vue'
+import HomePage from './views/HomePage.vue'
 import NotFound from './views/NotFound.vue'
 
 Vue.use(Router)
@@ -9,8 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'contents-page',
-      component: ContentsPage
+      name: 'home-page',
+      component: HomePage
     },
     {
       path: '/sensor',

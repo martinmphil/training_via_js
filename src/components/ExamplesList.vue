@@ -8,6 +8,10 @@
     <p class="bttn-linking-to-example">
       <router-link class="link-text" to="/functional-programming">Functional programming teaser</router-link>
     </p>
+    <div class="grade-info">
+      <SensorsGrade/>
+      <FunctionalProgrammingGrade/>
+    </div>
     <hr>
     <h3>JavaScript in gaming</h3>
     <p>
@@ -28,8 +32,14 @@
   </template>
 
 <script>
+import SensorsGrade from '@/components/SensorsGrade.vue'
+import FunctionalProgrammingGrade from '@/components/FunctionalProgrammingGrade.vue'
+
 export default {
-  name: 'ExamplesList'
+  name: 'ExamplesList',
+  components: {
+    SensorsGrade, FunctionalProgrammingGrade
+  }
 }
 </script>
 
@@ -51,5 +61,8 @@ export default {
 .link-text {
   text-decoration: none;
   color: black;
+}
+.grade-info {
+  margin: 1em;
 }
 </style>

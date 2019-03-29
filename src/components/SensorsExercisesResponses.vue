@@ -8,9 +8,9 @@
         :answerCode="item.id"
         :index="index"
         v-html="item.text"
-        @click.once="userResponse"
+        @click.once="userResponse(index)"
         :disabled=spent
-        :class="[item.classHolder, { answered: spent}]"
+        :class="[item.classHolder, { answered: spent }]"
     >
     </button>
   </div>
@@ -30,18 +30,15 @@ export default {
         { id: 'gamma', text: '<em>inaccurate</em> but precise', classHolder: '' },
         { id: 'delta', text: 'both inaccurate and imprecise', classHolder: '' }
       ],
-      spent: false,
-      userAnswerCode: ''
+      spent: false
     }
   },
   methods: {
-    userResponse: function (event) {
+    userResponse: function (i) {
       this.spent = true
-      this.userAnswerCode = event.target.getAttribute('answerCode')
-      let i = event.target.getAttribute('index')
       let a = this.possibleAnswers[i]
       let c = a.text
-      if (this.userAnswerCode === this.desiredAnswerCode) {
+      if (a.id === this.desiredAnswerCode) {
         this.$store.commit('correctAnswerSensors')
         a.classHolder = 'correctUserAnswer'
         a.text = `CORRECT: ` + c
