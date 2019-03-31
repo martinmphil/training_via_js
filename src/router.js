@@ -14,16 +14,20 @@ export default new Router({
     },
     {
       path: '/sensor',
-      name: 'Sensor',
+      name: 'sensor',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "sensor" */ './views/Sensors.vue')
+      component: () => import(/* webpackChunkName: "sensor" */
+        './views/Sensors.vue'
+      )
     },
     {
       path: '/functional-programming',
-      name: 'FunctionalProgramming',
-      component: () => import('./views/FunctionalProgramming.vue')
+      name: 'functional-programming',
+      component: () => import(/* webpackChunkName: "functional-programming" */
+        './views/FunctionalProgramming.vue'
+      )
     },
     {
       path: '*',

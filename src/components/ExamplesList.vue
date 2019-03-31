@@ -1,7 +1,6 @@
 <template>
   <article>
-    <h1>Training via JavaScript</h1>
-    <h2>Examples</h2>
+    <h1>Examples of training via JavaScript</h1>
     <p class="bttn-linking-to-example">
       <router-link class="link-text" to="/sensor">Sensor precision vs accuracy</router-link>
     </p>
@@ -9,6 +8,7 @@
       <router-link class="link-text" to="/functional-programming">Functional programming teaser</router-link>
     </p>
     <div class="grade-info">
+      <h3>Grade Information</h3>
       <SensorsGrade/>
       <FunctionalProgrammingGrade/>
     </div>
@@ -29,7 +29,7 @@
       </p>
     </div>
   </article>
-  </template>
+</template>
 
 <script>
 import SensorsGrade from '@/components/SensorsGrade.vue'

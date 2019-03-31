@@ -1,8 +1,11 @@
 <template>
-  <img id="training-via-js-logo"
-    alt="Training via JavaScript logo"
-    width="300" height="150"
-    src="../assets/training_via_js_logo.svg">
+  <div class="the-logo">
+    <router-link to="/">
+      <img class="training-via-js-logo"
+        alt="Training via JavaScript logo"
+        src="@/assets/training_via_js_logo.svg">
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -11,12 +14,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#training-via-js-logo {
-  float: right;
-  margin-left: 1em;
-  margin-bottom: 1em;
+.training-via-js-logo {
+  display: block;
 }
-
 </style>

@@ -15,8 +15,10 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-  name: 'YesNoQuestion',
+  name: 'FunctionalProgrammingQuestion',
   props: {
     questionText: String,
     yesAnsweredText: String,
@@ -30,41 +32,22 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'correctAnswerFunctionalProgramming',
+      'wrongAnswerFunctionalProgramming'
+    ]),
     answering: function (a) {
       this.instructionsOrResponse =
         (a === 'yes') ? this.yesAnsweredText : this.noAnsweredText
       if (this.spent === false) {
         if (a === this.desiredAnswer) {
-          this.$store.commit('correctAnswerFunctionalProgramming')
+          this.correctAnswerFunctionalProgramming()
         } else {
-          this.$store.commit('wrongAnswerFunctionalProgramming')
+          this.wrongAnswerFunctionalProgramming()
         }
       }
       this.spent = true
-      console.log(a)
-      console.log(this.desiredAnswer)
-      let jj = (a === this.desiredAnswer)
-      console.log(jj)
     }
-    // answeringYes: function () {
-    //   this.instructionsOrResponse = this.yesAnsweredText
-    //   if (this.spent === false) {
-    //     this.markingAnswer('yes')
-    //   }
-    // },
-    // answeringNo: function () {
-    //   this.instructionsOrResponse = this.noAnsweredText
-    //   if (this.spent === false) {
-    //     this.markingAnswer('no')
-    //   }
-    // },
-    // markingAnswer: function (a) {
-    //   if (a === this.desiredAnswer) {
-    //     this.$store.commit('correctAnswerFunctionalProgramming')
-    //   } else {
-    //     this.$store.commit('wrongAnswerFunctionalProgramming')
-    //   }
-    // }
   }
 }
 </script>
@@ -111,5 +94,4 @@ export default {
   background-color: white;
   color: rgba(77, 0, 102, 0.8);
 }
-
 </style>

@@ -1,11 +1,11 @@
 <template>
-    <footer class="footer">
-      <p>
-        For more examples of Training via JavaScript
-        please see your <router-link to="/">home page</router-link>.
-      </p>
-      {{ dateNow }}
-    </footer>
+  <footer class="footer">
+    <p>
+      Please visit your <router-link to="/">home page</router-link>
+      for more examples of Training via JavaScript.
+    </p>
+    {{ dateNow }}
+  </footer>
 </template>
 
 <script>

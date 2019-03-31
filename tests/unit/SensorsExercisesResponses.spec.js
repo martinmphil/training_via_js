@@ -8,15 +8,15 @@ localVue.use(Vuex)
 
 describe('SensorsExercisesResponses.vue', () => {
   let store
-  let mutations
+  let actions
 
   beforeEach(() => {
-    mutations = {
+    actions = {
       correctAnswerSensors: jest.fn(),
       wrongAnswerSensors: jest.fn()
     }
     store = new Vuex.Store({
-      mutations
+      actions
     })
   })
 
@@ -30,7 +30,7 @@ describe('SensorsExercisesResponses.vue', () => {
     expect(wrapper.find('button').is('button')).toBe(true)
   })
 
-  it('button click sets spent to true', () => {
+  it('sets spent to true on answer button click', () => {
     let wrapper = shallowMount(SensorsExercisesResponses, { store, localVue })
     wrapper.find('button').trigger('click')
     expect(wrapper.vm.spent).toBe(true)

@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'SensorsExercisesResponses',
   props: {
@@ -34,16 +36,17 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['correctAnswerSensors', 'wrongAnswerSensors']),
     userResponse: function (i) {
       this.spent = true
       let a = this.possibleAnswers[i]
       let c = a.text
       if (a.id === this.desiredAnswerCode) {
-        this.$store.commit('correctAnswerSensors')
+        this.correctAnswerSensors()
         a.classHolder = 'correctUserAnswer'
         a.text = `CORRECT: ` + c
       } else {
-        this.$store.commit('wrongAnswerSensors')
+        this.wrongAnswerSensors()
         a.text = `Incorrect`
       }
     }

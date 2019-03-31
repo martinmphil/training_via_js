@@ -1,14 +1,22 @@
 <template>
   <div class="sensors">
 
+    <the-header class="the-header"/>
+
+    <aside class="aside">
+      <the-logo class="the-logo"/>
+      <the-site-nav class="the-site-nav"/>
+    </aside>
+
     <sensors-grade/>
 
-    <header>
-      <h1>Accuracy vs precision</h1>
+    <section>
+      <h1>Sensors</h1>
+      <h2>Accuracy vs precision</h2>
       <p class="tagline">
         Comparing and contrasting accuracy with precision in sensor measurements
       </p>
-    </header>
+    </section>
     <section>
       <p>
         In common language <em>accuracy</em> and <em>precision</em> often appear synonymous.
@@ -52,6 +60,9 @@
 
 <script>
 // @ is an alias to /src
+import TheHeader from '@/components/TheHeader.vue'
+import TheLogo from '@/components/TheLogo.vue'
+import TheSiteNav from '@/components/TheSiteNav.vue'
 import SensorsExercises from '@/components/SensorsExercises.vue'
 import SensorsGrade from '@/components/SensorsGrade.vue'
 import TheFooter from '@/components/TheFooter.vue'
@@ -59,7 +70,7 @@ import TheFooter from '@/components/TheFooter.vue'
 export default {
   name: 'Sensors',
   components: {
-    SensorsExercises, SensorsGrade, TheFooter
+    TheHeader, TheLogo, TheSiteNav, SensorsExercises, SensorsGrade, TheFooter
   },
   computed: {
     dateNow: function () {
@@ -84,9 +95,12 @@ export default {
   font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
-.footer {
-  margin: 2em;
-  text-align: center;
-  font-size: 90%;
+/* responsive web design */
+@media only screen and (min-width: 50em) {
+  .the-header {
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+  }
 }
 </style>

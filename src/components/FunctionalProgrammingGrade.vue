@@ -1,10 +1,10 @@
 <template>
   <div class="grade-info">
-    <p>
-      Functional Programming: {{ currentMark }} ({{ progress }}% complete).
-    </p>
+    <p>Functional Programming mark:</p>
+    <p>({{ progress }}% complete)</p>
+    <p>{{ currentMark }}.</p>
     <p v-if="gradable">
-      Your Functional Programming assignment grade is: <strong>{{ grade }}</strong>.
+      Your grade is: <strong>{{ grade }}</strong>.
     </p>
   </div>
 </template>
@@ -19,8 +19,8 @@ export default {
     currentMark () {
       let c = this.$store.state.correctAnswerTallyFunctionalProgramming
       let w = this.$store.state.wrongAnswerTallyFunctionalProgramming
-      return c || w ? c + ' correct out of ' + (c + w) + ' attempted'
-        : 'Please answer questions to receive a mark'
+      return c || w ? c + ' out of ' + (c + w)
+        : 'Please answer questions to receive your mark'
     },
     progress () {
       let t = this.$store.state.totalNbrQuestionsFunctionalProgramming
@@ -47,6 +47,6 @@ export default {
 <style scoped>
 .grade-info {
   border: solid;
-  padding: 1em;
+  padding: 1%;
 }
 </style>

@@ -13,12 +13,31 @@ export default new Vuex.Store({
     wrongAnswerTallyFunctionalProgramming: 0
   },
   mutations: {
-    correctAnswerSensors: state => state.correctAnswerTallySensors++,
-    wrongAnswerSensors: state => state.wrongAnswerTallySensors++,
-    correctAnswerFunctionalProgramming: state => state.correctAnswerTallyFunctionalProgramming++,
-    wrongAnswerFunctionalProgramming: state => state.wrongAnswerTallyFunctionalProgramming++
+    CORRECT_ANSWER_SENSORS (state) {
+      state.correctAnswerTallySensors++
+    },
+    WRONG_ANSWER_SENSORS (state) {
+      state.wrongAnswerTallySensors++
+    },
+    CORRECT_ANSWER_FUNCTIONAL_PROGRAMMING (state) {
+      state.correctAnswerTallyFunctionalProgramming++
+    },
+    WRONG_ANSWER_FUNCTIONAL_PROGRAMMING (state) {
+      state.wrongAnswerTallyFunctionalProgramming++
+    }
   },
   actions: {
-
+    correctAnswerSensors (context) {
+      context.commit('CORRECT_ANSWER_SENSORS')
+    },
+    wrongAnswerSensors (context) {
+      context.commit('WRONG_ANSWER_SENSORS')
+    },
+    correctAnswerFunctionalProgramming (context) {
+      context.commit('CORRECT_ANSWER_FUNCTIONAL_PROGRAMMING')
+    },
+    wrongAnswerFunctionalProgramming (context) {
+      context.commit('WRONG_ANSWER_FUNCTIONAL_PROGRAMMING')
+    }
   }
 })

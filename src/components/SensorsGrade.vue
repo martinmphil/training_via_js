@@ -17,7 +17,7 @@ export default {
       let c = this.$store.state.correctAnswerTallySensors
       let w = this.$store.state.wrongAnswerTallySensors
       return c || w ? c + ' correct out of ' + (c + w) + ' attempted'
-        : 'Please complete assignment to receive a mark'
+        : 'Please complete assignment to receive your mark'
     },
     progress () {
       let t = this.$store.state.totalNbrQuestionsSensors
