@@ -1,10 +1,10 @@
 <template>
   <div class="grade-info">
-    <p>
-      Sensors: {{ currentMark }} ({{ progress }}% complete).
-    </p>
+    <p>Sensors mark:</p>
+    <p>({{ progress }}% complete)</p>
+    <p>{{ currentMark }}.</p>
     <p v-if="gradable">
-      Your Sensors assignment grade is: <strong>{{ grade }}</strong>.
+      Your grade is: <strong>{{ grade }}</strong>.
     </p>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     currentMark () {
       let c = this.$store.state.correctAnswerTallySensors
       let w = this.$store.state.wrongAnswerTallySensors
-      return c || w ? c + ' correct out of ' + (c + w) + ' attempted'
+      return c || w ? c + ' out of ' + (c + w)
         : 'Please complete assignment to receive your mark'
     },
     progress () {
@@ -45,5 +45,6 @@ export default {
 .grade-info {
   border: solid;
   padding: 1em;
+  text-align: center;
 }
 </style>

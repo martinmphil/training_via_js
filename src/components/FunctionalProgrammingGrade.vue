@@ -12,9 +12,6 @@
 <script>
 export default {
   name: 'FunctionalProgrammingGrade',
-  data: function () {
-    return { a: 0 }
-  },
   computed: {
     currentMark () {
       let c = this.$store.state.correctAnswerTallyFunctionalProgramming
@@ -48,5 +45,6 @@ export default {
 .grade-info {
   border: solid;
   padding: 1%;
+  text-align: center;
 }
 </style>

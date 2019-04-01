@@ -1,5 +1,5 @@
 <template>
-  <div class="functional-programming">
+  <div class="wrapper">
 
     <the-header class="the-header"/>
 
@@ -60,7 +60,7 @@ import TheFooter from '@/components/TheFooter.vue'
 export default {
   name: 'FunctionalProgramming',
   components: {
-    TheLogo, TheHeader, TheSiteNav, FunctionalProgrammingQuestion, FunctionalProgrammingGrade, TheFooter
+    TheHeader, TheLogo, TheSiteNav, FunctionalProgrammingQuestion, FunctionalProgrammingGrade, TheFooter
   },
   data: function () {
     return {
@@ -75,7 +75,6 @@ export default {
 .the-logo {
   max-width: 30em;
   margin: auto;
-  pointer-events: none;
 }
 
 .tagline {
@@ -83,7 +82,7 @@ export default {
 }
 
 /* responsive web design */
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 67em) {
   .the-header {
     position: fixed;
     top: 0.5em;
@@ -93,15 +92,14 @@ export default {
 
 /* responsive web design */
 @media only screen and (min-width: 40em) and (max-width: 67em) {
-  .functional-programming {
+  .wrapper {
     width: 40em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
   }
 }
 @media only screen and (min-width: 67em) and (max-width: 76em) {
-  .functional-programming {
+  .wrapper {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -110,7 +108,7 @@ export default {
   }
   .aside {
     margin-left: 1%;
-    max-width: 16em;
+    width: 16em;
     position: fixed;
     top: 3em;
     left: 0;
@@ -120,32 +118,27 @@ export default {
     flex-basis: 40em;
   }
   .grade-info {
-    max-width: 10em;
+    width: 10em;
     position: fixed;
     top: 3em;
     right: 0;
   }
 }
 @media only screen and (min-width: 76em) {
-  .functional-programming {
+  .wrapper {
     width: 40em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
   }
   .aside {
-    max-width: 16em;
+    width: 16em;
     position: fixed;
     top: 3em;
     left: 0;
     margin-left: 2%;
   }
-  .article {
-    order: 20;
-    flex-basis: 40em;
-  }
   .grade-info {
-    max-width: 16em;
+    width: 16em;
     position: fixed;
     top: 3em;
     right: 0;

@@ -1,12 +1,8 @@
 <template>
   <article>
     <h1>Examples of training via JavaScript</h1>
-    <p class="bttn-linking-to-example">
-      <router-link class="link-text" to="/sensor">Sensor precision vs accuracy</router-link>
-    </p>
-    <p class="bttn-linking-to-example">
-      <router-link class="link-text" to="/functional-programming">Functional programming teaser</router-link>
-    </p>
+    <router-link class="bttn-linking-to-example" to="/sensor">Sensor precision vs accuracy</router-link>
+    <router-link class="bttn-linking-to-example" to="/functional-programming">Functional programming teaser</router-link>
     <div class="grade-info">
       <h3>Grade Information</h3>
       <SensorsGrade/>
@@ -46,19 +42,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bttn-linking-to-example {
-  clear: right;
+  display: block;
+  width: 80%;
   background-color: #ddffff;
-  text-align: center;
-  font-size: 120%;
   border: solid;
   border-color: rgba(0,0,0,0.1);
   border-radius: 0.4em;
   padding: 1em;
-  margin: 1em;
+  margin: 1em auto;
   box-shadow: 0.4em 0.4em 0.5em 0.1em rgba(0,0,0,0.5);
   cursor: pointer;
-}
-.link-text {
+  text-align: center;
+  font-size: 120%;
   text-decoration: none;
   color: black;
 }

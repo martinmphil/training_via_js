@@ -1,5 +1,5 @@
 <template>
-  <div class="sensors">
+  <div class="wrapper">
 
     <the-header class="the-header"/>
 
@@ -10,14 +10,12 @@
 
     <sensors-grade/>
 
-    <section>
+    <article>
       <h1>Sensors</h1>
       <h2>Accuracy vs precision</h2>
       <p class="tagline">
         Comparing and contrasting accuracy with precision in sensor measurements
       </p>
-    </section>
-    <section>
       <p>
         In common language <em>accuracy</em> and <em>precision</em> often appear synonymous.
         But in sensor technology,
@@ -46,14 +44,15 @@
         whereas precision indicates a reliable grouping within a dataset.
       </p>
       <hr>
-    </section>
 
-    <sensors-exercises/>
+      <sensors-exercises/>
 
-    <sensors-grade/>
-    <hr>
+      <sensors-grade/>
+      <hr>
 
-    <the-footer/>
+      <the-footer/>
+
+    </article>
 
   </div>
 </template>
@@ -81,6 +80,11 @@ export default {
 </script>
 
 <style scoped>
+.the-logo {
+  max-width: 30em;
+  margin: auto;
+}
+
 .tagline {
   font-weight: bold;
 }
@@ -96,11 +100,68 @@ export default {
 }
 
 /* responsive web design */
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 67em) {
   .the-header {
     position: fixed;
     top: 0.5em;
     left: 0.5em;
+  }
+}
+
+/* responsive web design */
+@media only screen and (min-width: 40em) and (max-width: 67em) {
+  .wrapper {
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 67em) and (max-width: 76em) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 10em;
+    margin-left: 17em;
+  }
+  .aside {
+    margin-left: 1%;
+    width: 16em;
+    position: fixed;
+    top: 3em;
+    left: 0;
+  }
+  .article {
+    order: 20;
+    flex-basis: 40em;
+  }
+  .grade-info {
+    width: 10em;
+    position: fixed;
+    top: 3em;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 76em) {
+  .wrapper {
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aside {
+    width: 16em;
+    position: fixed;
+    top: 3em;
+    left: 0;
+    margin-left: 2%;
+  }
+  .grade-info {
+    width: 16em;
+    position: fixed;
+    top: 3em;
+    right: 0;
+    margin-right: 2%;
   }
 }
 </style>
