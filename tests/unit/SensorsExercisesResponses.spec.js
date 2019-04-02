@@ -9,24 +9,29 @@ localVue.use(Vuex)
 describe('SensorsExercisesResponses.vue', () => {
   let store
   let actions
+  let state
 
   beforeEach(() => {
     actions = {
       correctAnswerSensors: jest.fn(),
-      wrongAnswerSensors: jest.fn()
+      wrongAnswerSensors: jest.fn(),
+      submitAnswerSensor: jest.fn()
+    }
+    state = {
+      sensorsSubmissions: ['graph-a', 'graph-b']
     }
     store = new Vuex.Store({
-      actions
+      actions, state
     })
   })
 
   it('has spent prop', () => {
-    let wrapper = shallowMount(SensorsExercisesResponses)
+    let wrapper = shallowMount(SensorsExercisesResponses, { store, localVue })
     expect(wrapper.vm.spent).toBe(false)
   })
 
   it('has button', () => {
-    let wrapper = shallowMount(SensorsExercisesResponses)
+    let wrapper = shallowMount(SensorsExercisesResponses, { store, localVue })
     expect(wrapper.find('button').is('button')).toBe(true)
   })
 

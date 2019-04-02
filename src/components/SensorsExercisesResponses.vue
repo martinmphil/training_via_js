@@ -22,7 +22,8 @@ import { mapActions } from 'vuex'
 export default {
   name: 'SensorsExercisesResponses',
   props: {
-    desiredAnswerCode: String
+    desiredAnswerCode: String,
+    questionTitle: String
   },
   data: function () {
     return {
@@ -35,9 +36,21 @@ export default {
       spent: false
     }
   },
+  created () {
+    if (this.$store.state.sensorsSubmissions
+      .filter(x => x === this.questionTitle).length > 0
+    ) {
+      this.spent = true
+    }
+  },
   methods: {
-    ...mapActions(['correctAnswerSensors', 'wrongAnswerSensors']),
+    ...mapActions([
+      'correctAnswerSensors',
+      'wrongAnswerSensors',
+      'submitAnswerSensor'
+    ]),
     userResponse: function (i) {
+      this.submitAnswerSensor(this.questionTitle)
       this.spent = true
       let a = this.possibleAnswers[i]
       let c = a.text

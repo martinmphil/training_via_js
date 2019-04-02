@@ -14,7 +14,10 @@
       For the graph above,
       please select the appropriate description from the four options below:
     </p>
-    <SensorsExercisesResponses desiredAnswerCode="gamma"/>
+    <SensorsExercisesResponses
+      questionTitle="graph-a"
+      desiredAnswerCode="gamma"
+    />
     <hr>
     <h3>Graph B</h3>
     <img
@@ -26,7 +29,10 @@
       For the graph above,
       please select the appropriate description from the four options below:
     </p>
-    <SensorsExercisesResponses desiredAnswerCode="delta"/>
+    <SensorsExercisesResponses
+      questionTitle="graph-b"
+      desiredAnswerCode="delta"
+    />
     <hr>
     <h3>Graph C</h3>
     <img
@@ -38,7 +44,10 @@
       For the graph above,
       please select the appropriate description from the four options below:
     </p>
-    <SensorsExercisesResponses desiredAnswerCode="alpha"/>
+    <SensorsExercisesResponses
+      desiredAnswerCode="alpha"
+      questionTitle="graph-c"
+    />
     <hr>
     <h3>Graph D</h3>
     <img
@@ -50,7 +59,10 @@
       For the graph above,
       please select the appropriate description from the four options below:
     </p>
-    <SensorsExercisesResponses desiredAnswerCode="beta"/>
+    <SensorsExercisesResponses
+      questionTitle="graph-d"
+      desiredAnswerCode="beta"
+    />
     <hr>
   </section>
 </template>

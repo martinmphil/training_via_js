@@ -5,19 +5,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    totalNbrQuestionsSensors: 4,
-    correctAnswerTallySensors: 0,
-    wrongAnswerTallySensors: 0,
+    sensorsQuestionsTotalNbr: 4,
+    sensorsCorrectAnswerTally: 0,
+    sensorsWrongAnswerTally: 0,
+    sensorsSubmissions: [],
     totalNbrQuestionsFunctionalProgramming: 7,
     correctAnswerTallyFunctionalProgramming: 0,
     wrongAnswerTallyFunctionalProgramming: 0
   },
   mutations: {
     CORRECT_ANSWER_SENSORS (state) {
-      state.correctAnswerTallySensors++
+      state.sensorsCorrectAnswerTally++
     },
     WRONG_ANSWER_SENSORS (state) {
-      state.wrongAnswerTallySensors++
+      state.sensorsWrongAnswerTally++
+    },
+    SUBMIT_ANSWER_SENSOR (state, submission) {
+      state.sensorsSubmissions.push(submission)
     },
     CORRECT_ANSWER_FUNCTIONAL_PROGRAMMING (state) {
       state.correctAnswerTallyFunctionalProgramming++
@@ -32,6 +36,9 @@ export default new Vuex.Store({
     },
     wrongAnswerSensors (context) {
       context.commit('WRONG_ANSWER_SENSORS')
+    },
+    submitAnswerSensor (context, submission) {
+      context.commit('SUBMIT_ANSWER_SENSOR', submission)
     },
     correctAnswerFunctionalProgramming (context) {
       context.commit('CORRECT_ANSWER_FUNCTIONAL_PROGRAMMING')

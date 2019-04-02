@@ -10,31 +10,31 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'SensorsGrade',
   computed: {
+    ...mapState({
+      t: 'sensorsQuestionsTotalNbr',
+      c: 'sensorsCorrectAnswerTally',
+      w: 'sensorsWrongAnswerTally'
+    }),
     currentMark () {
-      let c = this.$store.state.correctAnswerTallySensors
-      let w = this.$store.state.wrongAnswerTallySensors
-      return c || w ? c + ' out of ' + (c + w)
+      return this.c || this.w ? this.c + ' out of ' + (this.c + this.w)
         : 'Please complete assignment to receive your mark'
     },
     progress () {
-      let t = this.$store.state.totalNbrQuestionsSensors
-      let c = this.$store.state.correctAnswerTallySensors
-      let w = this.$store.state.wrongAnswerTallySensors
-      let progressCoefficient = ((c + w) / t)
+      let progressCoefficient = ((this.c + this.w) / this.t)
       return progressCoefficient > 1 ? 100 : Math.round(progressCoefficient * 100)
     },
     gradable () {
-      let c = this.$store.state.correctAnswerTallySensors
-      return (this.progress === 100 && c >= 2)
+      return (this.progress === 100 && this.c >= 2)
     },
     grade () {
-      let c = this.$store.state.correctAnswerTallySensors
-      return c >= 4 ? 'Distinction'
-        : c >= 3 ? 'Merit'
-          : c >= 2 ? 'Pass'
+      return this.c >= 4 ? 'Distinction'
+        : this.c >= 3 ? 'Merit'
+          : this.c >= 2 ? 'Pass'
             : 'Fail'
     }
   }
