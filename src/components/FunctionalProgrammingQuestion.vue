@@ -23,7 +23,8 @@ export default {
     questionText: String,
     yesAnsweredText: String,
     noAnsweredText: String,
-    desiredAnswer: String
+    desiredAnswer: String,
+    questionCode: String
   },
   data: function () {
     return {
@@ -31,12 +32,21 @@ export default {
       instructionsOrResponse: 'Please click an answer button above.'
     }
   },
+  created () {
+    if (this.$store.state.functionalProgrammingSubmissions
+      .filter(x => x === this.questionCode).length > 0
+    ) {
+      this.spent = true
+    }
+  },
   methods: {
     ...mapActions([
       'correctAnswerFunctionalProgramming',
-      'wrongAnswerFunctionalProgramming'
+      'wrongAnswerFunctionalProgramming',
+      'submitAnswerFunctionalProgramming'
     ]),
     answering: function (a) {
+      this.submitAnswerFunctionalProgramming(this.questionCode)
       this.instructionsOrResponse =
         (a === 'yes') ? this.yesAnsweredText : this.noAnsweredText
       if (this.spent === false) {

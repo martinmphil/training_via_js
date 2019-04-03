@@ -10,7 +10,7 @@ localVue.use(Vuex)
 describe('SensorsExercises.vue', () => {
   let store
   let actions
-  let state  
+  let state
 
   beforeEach(() => {
     actions = {

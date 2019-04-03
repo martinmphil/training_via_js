@@ -26,6 +26,7 @@
           :yesAnsweredText="item.yesAnsweredText"
           :noAnsweredText="item.noAnsweredText"
           :desiredAnswer="item.bestAnswer"
+          :questionCode="item.questionCode"
         />
       </div>
 

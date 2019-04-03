@@ -9,9 +9,10 @@ export default new Vuex.Store({
     sensorsCorrectAnswerTally: 0,
     sensorsWrongAnswerTally: 0,
     sensorsSubmissions: [],
-    totalNbrQuestionsFunctionalProgramming: 7,
-    correctAnswerTallyFunctionalProgramming: 0,
-    wrongAnswerTallyFunctionalProgramming: 0
+    functionalProgrammingQuestionsTotalNbr: 7,
+    functionalProgrammingCorrectAnswerTally: 0,
+    functionalProgrammingWrongAnswerTally: 0,
+    functionalProgrammingSubmissions: []
   },
   mutations: {
     CORRECT_ANSWER_SENSORS (state) {
@@ -24,10 +25,13 @@ export default new Vuex.Store({
       state.sensorsSubmissions.push(submission)
     },
     CORRECT_ANSWER_FUNCTIONAL_PROGRAMMING (state) {
-      state.correctAnswerTallyFunctionalProgramming++
+      state.functionalProgrammingCorrectAnswerTally++
     },
     WRONG_ANSWER_FUNCTIONAL_PROGRAMMING (state) {
-      state.wrongAnswerTallyFunctionalProgramming++
+      state.functionalProgrammingWrongAnswerTally++
+    },
+    SUBMIT_ANSWER_FUNCTIONAL_PROGRAMMING (state, submission) {
+      state.functionalProgrammingSubmissions.push(submission)
     }
   },
   actions: {
@@ -45,6 +49,9 @@ export default new Vuex.Store({
     },
     wrongAnswerFunctionalProgramming (context) {
       context.commit('WRONG_ANSWER_FUNCTIONAL_PROGRAMMING')
+    },
+    submitAnswerFunctionalProgramming (context, submission) {
+      context.commit('SUBMIT_ANSWER_FUNCTIONAL_PROGRAMMING', submission)
     }
   }
 })
