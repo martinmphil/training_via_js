@@ -46,7 +46,11 @@ export default {
       'submitAnswerFunctionalProgramming'
     ]),
     answering: function (a) {
-      this.submitAnswerFunctionalProgramming(this.questionCode)
+      if (this.$store.state.functionalProgrammingSubmissions
+        .filter(x => x === this.questionCode).length < 1
+      ) {
+        this.submitAnswerFunctionalProgramming(this.questionCode)
+      }
       this.instructionsOrResponse =
         (a === 'yes') ? this.yesAnsweredText : this.noAnsweredText
       if (this.spent === false) {
