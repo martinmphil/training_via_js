@@ -12,18 +12,23 @@
     <h3>JavaScript in gaming</h3>
     <p>
       <a href="http://dancewith.co.uk/tabletop2019/">
-        Computer-aid tabletop role-playing game.
+        Computer-aid tabletop role-playing game
       </a>
     </p>
     <hr>
-    <div class="references">
-      <h3>Source code and documentation</h3>
-      <p>
-        <a href="https://github.com/martinmphil">
-          GitHub repositories.
-        </a>
-      </p>
-    </div>
+    <h4>Miscellaneous</h4>
+    <p>
+      <a href="https://job-scheduler.netlify.com/">
+        JavaScript job scheduler
+      </a>
+    </p>
+    <hr>
+    <h3>Source code and documentation</h3>
+    <p>
+      <a href="https://github.com/martinmphil">
+        GitHub repositories.
+      </a>
+    </p>
   </article>
 </template>
 
