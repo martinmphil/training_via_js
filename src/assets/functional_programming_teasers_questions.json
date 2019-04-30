@@ -21,7 +21,7 @@
 "questionCode": "q_immut"
 },
 {
-"questionText": "Is everything a pure function needs passed-in as arguments?",
+"questionText": "Do arguments supply everything a pure function needs?",
 "yesAnsweredText": "A pure function does not necessarily need all inputs passed-in as parameters because a pure function calling other pure functions remains pure itself.",
 "noAnsweredText": "Correct, all parameters must be passed-in as arguments but a pure function can call other pure functions and still maintain referential transparency.",
 "bestAnswer": "no",
