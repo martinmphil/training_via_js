@@ -33,6 +33,10 @@ export default {
     width: 40em;
     margin: auto;
   }
+}
+
+/* responsive web design */
+@media only screen and (min-width: 67em) {
   .the-header {
     position: fixed;
     top: 0.5em;

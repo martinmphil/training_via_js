@@ -9,26 +9,37 @@
       <FunctionalProgrammingGrade/>
     </div>
     <hr>
-    <h3>JavaScript in gaming</h3>
-    <p>
-      <a href="http://dancewith.co.uk/tabletop2019/">
-        Computer-aid tabletop role-playing game
-      </a>
-    </p>
+    <div class="external-examples">
+      <h2>External examples</h2>
+      <h3>React hooks</h3>
+      <p>
+        <a href="http://dancewith.co.uk/vote/">
+          Vote app
+        </a>
+      </p>
+      <h3>JavaScript in gaming</h3>
+      <p>
+        <a href="http://dancewith.co.uk/tabletop2019/">
+          Computer-aid tabletop role-playing game
+        </a>
+      </p>
+      <hr>
+      <hr>
+      <h4>Miscellaneous</h4>
+      <p>
+        <a href="https://job-scheduler.netlify.com/">
+          JavaScript job scheduler
+        </a>
+      </p>
+      <hr>
+      <h3>Source code and documentation</h3>
+      <p>
+        <a href="https://github.com/martinmphil">
+          GitHub repositories.
+        </a>
+      </p>
+    </div>
     <hr>
-    <h4>Miscellaneous</h4>
-    <p>
-      <a href="https://job-scheduler.netlify.com/">
-        JavaScript job scheduler
-      </a>
-    </p>
-    <hr>
-    <h3>Source code and documentation</h3>
-    <p>
-      <a href="https://github.com/martinmphil">
-        GitHub repositories.
-      </a>
-    </p>
   </article>
 </template>
 
@@ -62,7 +73,22 @@ export default {
   text-decoration: none;
   color: black;
 }
+.bttn-linking-to-example:hover {
+  background-color: white;
+
+}
+
 .grade-info {
   margin: 1em;
+}
+
+.external-examples {
+  box-shadow: inset 0 -0.2em 0 hsla(0, 0%, 100%, 0.4), inset 0 0.2em 0.2em hsla(0, 0%, 0%, 0.4);
+  background-color: hsl(269, 41%, 90%);
+  border-radius: 0.5em;
+  padding: .8em
+}
+.external-examples a {
+  color: blue;
 }
 </style>
