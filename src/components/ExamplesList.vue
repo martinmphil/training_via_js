@@ -11,6 +11,12 @@
     <hr>
     <div class="external-examples">
       <h2>External examples</h2>
+      <h3>Business psychology</h3>
+      <p>
+        <a href="http://dancewith.co.uk/sjt/">
+          Situational judgement tests
+        </a>
+      </p>
       <h3>React hooks</h3>
       <p>
         <a href="http://dancewith.co.uk/vote/">
@@ -21,14 +27,6 @@
       <p>
         <a href="http://dancewith.co.uk/tabletop2019/">
           Computer-aid tabletop role-playing game
-        </a>
-      </p>
-      <hr>
-      <hr>
-      <h4>Miscellaneous</h4>
-      <p>
-        <a href="https://job-scheduler.netlify.com/">
-          JavaScript job scheduler
         </a>
       </p>
       <hr>
