@@ -8,7 +8,7 @@ Using JavaScript in online training
 
 This demo uses web components to compare and contrast accuracy with precision in sensor measurements. 
 
-Web components use browser standards. Web components inherently work everywhere. 
+Web components use browser standards. They inherently work everywhere. 
 
 The whole application automatically unfolds from the following simple HTML 
 ````
