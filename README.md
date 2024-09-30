@@ -11,7 +11,7 @@ This demo uses web components to compare and contrast accuracy with precision in
 Web components use browser standards. They inherently work everywhere. 
 
 The whole application automatically unfolds from the following simple HTML 
-````
+```
 <accurate-precise>
   <script type="module" src="./accurate-precise/web-comp.js"></script>
 </accurate-precise>
