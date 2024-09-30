@@ -1,6 +1,6 @@
 # Training via JavaScript
 
-Using JavaScript in for online training
+Using JavaScript in online training
 
 ![Training via JavaScript logo](https://user-images.githubusercontent.com/37618836/157210711-e9e64cd2-ee87-44f6-9814-5030d24ac882.png)
 
