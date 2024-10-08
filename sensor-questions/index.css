@@ -5,8 +5,7 @@
 body {
   background-color: #28282B;
   color: #fcf9e8;
-  font-family: 'IBM Plex Sans', 'Cabin', 'Noto Sans', 'Trebuchet MS', Tahoma, Verdana,
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 400;
   max-width: 36rem;
   margin: auto;

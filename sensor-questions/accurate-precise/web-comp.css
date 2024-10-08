@@ -22,8 +22,7 @@ button:hover {
   border-radius: 0.4em;
   border: 2px solid silver;
   cursor: pointer;
-  font-family: 'IBM Plex Sans', 'Cabin', 'Noto Sans', 'Trebuchet MS', Tahoma, Verdana,
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
