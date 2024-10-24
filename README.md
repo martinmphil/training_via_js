@@ -17,6 +17,8 @@ The whole application automatically unfolds from the following simple HTML.
 </accurate-precise>
 ```
 
+See [web component demo](https://www.greenstem.uk/demo/web-comp)
+
 ## Serving locally 
 
 This demo uses `fetch` which requires an http server. 
